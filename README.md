@@ -1,2 +1,2 @@
-# -android-Pick-one-for-me
+# Pick-one-for-me
 random voting android app
