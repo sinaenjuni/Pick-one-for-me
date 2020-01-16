@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  <androidx.viewpager.widget.ViewPager
+      android:orientation="horizontal"
+      android:id="@+id/main_viewpager"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.95"
+      android:background="@color/colorPrimary"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+  <com.google.android.material.tabs.TabLayout
+      android:id="@+id/main_tablayout"
+      android:layout_weight="0.1"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:tabGravity="fill"
+      app:tabMode="fixed"
+      app:tabIndicatorColor="@color/colorSecondaryPrimary"
+      app:tabIndicatorGravity="top"
+      app:tabTextColor="@android:color/black"
+      app:tabSelectedTextColor="@color/colorSecondaryPrimaryDark"
+      android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      android:background="@color/colorPrimaryLight"/>
+
+
+<!--  design:tabGravity  탭의 정렬 방식 선택-->
+<!--  fill : 너비를 모두 같게 표시-->
+<!--  center : 가운데 정렬하여 표시-->
+
+<!--  design:tabMode  탭의 표시 방식을 선택-->
+<!--  Fixed : 모든 탭을 한번에 표시-->
+<!--  Scrollable : 일부 탭만 표시. 나머지 스크롤-->
+
+<!--  design:tabIndicatorColor: 현재 선택된 탭에 대한 색 지정-->
+<!--  design:tabTextColor: 탭에 적용할 기본 텍스트 색 지정-->
+<!--  design:tabSelectedTextColor 현재 선택된 탭의 텍스트 색 지정-->
+
+
+</LinearLayout>
